@@ -97,17 +97,17 @@ function useStream(stream) {
 
 function displayInfo(frequency) {
   if (stringBeingTuned) {
-    stringElement.textContent = `String: ${stringsName[stringBeingTuned]}`;
-    hzElement.textContent = `Frequency: ${frequency.toFixed(
-      1
-    )} / ${standardFrequency[stringBeingTuned].toFixed(1)} Hz`;
-    errorElement.textContent = `Error: ${
+    stringElement.textContent = `${stringsName[stringBeingTuned]}`;
+    hzElement.textContent = `${frequency.toFixed(1)} / ${standardFrequency[
+      stringBeingTuned
+    ].toFixed(1)} Hz`;
+    errorElement.textContent = `${(
       (Math.abs(
         frequency.toFixed(1) - standardFrequency[stringBeingTuned].toFixed(1)
       ) *
         100) /
       standardFrequency[stringBeingTuned].toFixed(1)
-    }%`;
+    ).toFixed(1)}%`;
   }
 }
 
