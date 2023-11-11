@@ -1,11 +1,5 @@
 const CACHE_NAME = "v0.1";
-const urlsToCache = [
-  "/",
-  "/index.html",
-  "/manifest.json",
-  "/app.js",
-  "/maskable-icon.png",
-];
+const urlsToCache = ["/"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
